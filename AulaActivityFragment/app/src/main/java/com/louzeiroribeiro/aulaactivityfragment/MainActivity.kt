@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     lateinit var buttonAbrir: Button
-
     lateinit var buttonFecharApp: Button
 
 
@@ -38,6 +38,20 @@ class MainActivity : AppCompatActivity() {
                 DetalhesActivity::class.java
             )
 
+//            intent.putExtra("filme", "The Witcher")
+//            intent.putExtra("classificacao", 5)
+//            intent.putExtra("avaliacoes", 9.2)
+
+            val filme = Filme(
+                nome = "Sem limites",
+                descricao ="Descrição teste",
+                diretor = "Diretor teste",
+                distribuidor = "Netflix",
+                avaliacoes = 9.5
+            )
+
+            intent.putExtra("filme", filme)
+
             startActivity(intent)
         }
 
@@ -46,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         buttonFecharApp.setOnClickListener() {
             finish()
         }
+
 
     }
 
