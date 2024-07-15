@@ -37,7 +37,6 @@ class ResultadoActivity : AppCompatActivity() {
 
             val imc = peso / (altura * altura)
 
-
             val resultado = if (imc < 18.5) {
                 "Baixo"
             } else if (imc in 1.5..24.9) {
