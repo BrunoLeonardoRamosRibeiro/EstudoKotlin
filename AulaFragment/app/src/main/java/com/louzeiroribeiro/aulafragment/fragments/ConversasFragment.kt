@@ -6,10 +6,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.louzeiroribeiro.aulafragment.R
 
 class ConversasFragment : Fragment() {
+//class ConversasFragment : Fragment(R.layout.fragment_conversas) {
+
+    private lateinit var btnExecutar: Button
+    private lateinit var textNome: TextView
+    private lateinit var editNome: EditText
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Log.i("ciclo_vida", "Fragment onAttach")
@@ -69,10 +78,22 @@ class ConversasFragment : Fragment() {
         Log.i("ciclo_vida", "Fragment onCreateView")
 
         val view = inflater.inflate(
-                R.layout.fragment_conversas,
-        container,
-        false
+            R.layout.fragment_conversas,
+            container,
+            false
         )
+
+        btnExecutar = view.findViewById(R.id.btn_executar)
+        editNome = view.findViewById(R.id.edit_nome)
+        textNome = view.findViewById(R.id.text_nome)
+
+
+
+        btnExecutar.setOnClickListener {
+            val nome = editNome.text.toString().trim()
+            textNome.text = nome
+        }
+
 
         return view
     }

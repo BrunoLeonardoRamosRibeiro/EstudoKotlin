@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.louzeiroribeiro.aulafragment.R
 
-class ChamadasFragment : Fragment() {
+//class ChamadasFragment : Fragment( ) {
+class ChamadasFragment : Fragment(R.layout.fragment_chamadas) {
 
-    override fun onCreateView(
+    /* override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +23,6 @@ class ChamadasFragment : Fragment() {
         )
 
         return view
-    }
+    } */
 
 }
