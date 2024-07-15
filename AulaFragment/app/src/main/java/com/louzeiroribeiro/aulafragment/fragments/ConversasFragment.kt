@@ -58,7 +58,7 @@ class ConversasFragment : Fragment() {
 
     override fun onDetach() {
         super.onDetach()
-        Log.i("ciclo_vida", "Fragment onDetach")_
+        Log.i("ciclo_vida", "Fragment onDetach")
     }
 
     override fun onCreateView(
