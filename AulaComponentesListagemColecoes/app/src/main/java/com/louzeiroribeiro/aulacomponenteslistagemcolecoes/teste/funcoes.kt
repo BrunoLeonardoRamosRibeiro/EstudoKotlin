@@ -29,7 +29,7 @@ fun main(){
     val botao = Botao()
 
     botao.configurarCliqueBotao{
-        println("Executu função lambda $it")
+        println("Executou função lambda $it")
     }
 //    botao.configurarCliqueBotao {
 //        println("Executu função lambda")
